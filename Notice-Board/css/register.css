@@ -1,0 +1,283 @@
+/* signup.php もしくは signup.php と login.php の併用*/
+h3{
+    font-size: 30px;
+    color: green;
+    margin-bottom: 0%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+h4{
+    font-size: 30px;
+    color: green;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.error_list{
+    color: red;
+    padding-left: 30%;
+    width: 75%;
+}
+.forms{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0px 30px 20px 20px;
+    border: 1px solid blue;
+}
+.form{
+    margin: 0 auto;
+    margin-bottom: 7px;
+    text-align: left;
+}
+.form-control{
+    height: 35px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+.reset{
+    float: right;
+}
+label{
+    margin-top: 25px;
+}
+.label{
+    color: azure;
+    font-size: 80%;
+}
+.reg{
+    width: 90%;
+    height: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 5px;
+}
+input:required{
+    background-color: rgb(247, 222, 222);
+}
+input:valid{
+    background: transparent; /* 入力内容が正しければ背景の色を消す */
+}
+input:focus{
+    background: #DCEDC8; /* 選択されたテキストフィールドの色を変える */
+}
+#back-btn{
+    padding-top: 15px;
+    float: left;
+}
+#submit-btn {
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0px 5px black;
+    background-color: rgb(34, 139, 139);
+    border-radius: 5px;
+    float: right;
+}
+
+/* login.php */
+h2{
+    font-size: 40px;
+    color: green;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.loginfail{
+    font-size: large;
+    text-align: center;
+    color: red;
+}
+#pass-form{
+    margin-bottom: 40px;
+}
+#login-btn{
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    box-shadow: 0px 5px black;
+    background-color: rgb(34, 139, 139);
+    border-radius: 5px;
+    float: right;
+}
+#logincheck{
+    padding-left: 0%;
+    font-size: 12px;
+    color: red;
+}
+#fooer{
+    margin-top: 20px;
+    text-align: center;
+}
+.to_signup{
+    cursor: pointer;
+    border-bottom: 2px solid rgb(0, 102, 255);
+}
+
+/** post & edit */
+.post_forms{
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0px 30px 20px 20px;
+    border: 2px solid blue;
+}
+h6{
+    margin-top: 1%;
+    margin-bottom: 0%;
+    text-align: right;
+}
+.login_user{
+    width: 20%;
+}
+select{
+    background:#f3e9df;
+}
+.select_region{
+    background: rgb(225, 228, 60);
+}
+p {
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+#post-btn{
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    box-shadow: 0px 5px black;
+    background-color: rgb(34, 139, 139);
+    border-radius: 5px;
+    float: right;
+}
+
+/* comment */
+.post_user_form{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0%;
+    width: 45%;
+}
+.post_user_form p{
+    float: right;
+    margin-top: 0%;
+    height: 100%;
+}
+.posted{
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 5%;
+    padding: 1% 2%;
+    border: 2px inset #cfc8ed;
+    background-color: #e1eeeb;
+    border-radius: 20px;
+}
+.comment_form_all{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.box{
+    width: 90%;
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.comment_index{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.comment_title{
+    background-color: white;
+    margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border-bottom: 1px solid rgb(121, 148, 235);
+}
+.comment_title h4{
+    font-family: Impact;
+}
+.comment_index{
+    margin-top: 5%;
+}
+.comment_content{
+    border: 5px inset #b3f0f5;
+    border-radius: 20px;
+    background-color: white;
+}
+.edit_btn_form{
+    float: left;
+    margin-right: 9%;
+    border-bottom: 2px solid rgb(0, 102, 255);
+}
+.delete_btn_form{
+    float: left;
+    border-bottom: 2px solid lightcoral;
+}
+.comment_at_form p{
+    text-align: right;
+    margin-bottom: 0%;
+}
+footer p{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 2px solid #e2e080;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px ){
+    /* ユーザー登録・ログイン・新規投稿・編集 */
+    .error_list{
+        padding-left: 10%;
+        width: 95%;
+    }
+    .forms{
+        width: 80%;
+    }
+    .btn-wrapper{
+        width: 100%;
+    }
+    #submit-btn{
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    .loginfail{
+        padding-left: 5%;
+    }
+    .post_forms{
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0px 30px 20px 20px;
+        border: 2px solid blue;
+    }
+
+    /* コメント投稿 */
+    .post_user_form{
+        width: 80%;
+    }
+    .posted{
+        width: 80%;
+    }
+    .comment_form_all{
+        width: 85%;
+    }
+    #post-btn{
+        padding: 1px 3px;
+        box-shadow: 0px 2px black;
+    }
+    .comment_index{
+        margin-top: 20%;
+        width: 100%;
+    }
+    .comment_title{
+        text-align: center;
+    }
+}

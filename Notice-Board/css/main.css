@@ -1,0 +1,261 @@
+/* main */
+body{
+    background-image: url(../image/Gaz_Brijuni.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+header{
+    position :fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: rgba(6, 120, 155, 0.699);
+    z-index: 10;
+}
+.header-left{
+    margin: auto 0;
+    cursor: pointer;
+    padding-left: 0.8%;
+    padding-right: 0.8%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px inset rgb(73, 235, 9);
+    border-radius: 7px;
+    background-color: rgb(230, 240, 233);
+}
+.header-left p{
+    margin-bottom: 0;
+}
+.header-left:hover {
+    background-color: rgba(255,255,255,0.5);
+}
+.to-use{
+    float: left;
+    margin-right: 0%;
+    margin-left: 5%;
+    width: 15%;
+    height: 100%;
+}
+.btn-primary{
+    width: 60%;
+    margin: auto 0;
+}
+.username{
+    margin: auto 0;
+}
+.username p{
+    margin-bottom: 0;
+    color: rgb(2, 32, 12);
+}
+.display_name{
+    color: rgb(217, 255, 0);
+}
+#navi{
+    width: 50%;
+}
+#drop_down_icon{
+    float: left;
+}
+.topost{
+    text-align: center;
+    width: 60%;
+    height: 90%;
+    float: left;
+}
+#topost{
+    height: 100%;
+    width: 45%;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+}
+.logout{
+    margin: auto 0;
+    float: right;
+}
+#logout{
+    background-color: rgba(240, 236, 231, 0.7);
+    box-shadow: 0px 2px black;
+    border-radius: 7px;
+    margin-top: 7%;
+}
+.index{
+    margin-top: 9%;
+    text-align: center;
+}
+.index h2{
+    margin-bottom: 0;
+    color: white;
+}
+.box{
+    width: 50%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1% 1%;
+    background-color: white;
+    border-radius: 10px;
+}
+.mainthread{
+    border: 3px inset rgb(47, 172, 255);
+    padding: 1% 1%;
+}
+.mainthread p{
+    margin-bottom: 1%;
+}
+.post_user_form{
+    float: right;
+    margin-right: 2%;
+}
+.post_user_form p{
+    margin-bottom: 0%;
+}
+.edit_btn_form{
+    float: left;
+    margin-right: 9%;
+    border-bottom: 2px solid rgb(0, 102, 255);
+}
+.delete_btn_form{
+    float: left;
+    border-bottom: 2px solid lightcoral;
+}
+.delete_btn_form a{
+    color: lightcoral;
+}
+.post_at_form p{
+    text-align: right;
+    margin-bottom: 0%;
+}
+.tocomment{
+    text-align: right;
+    border-bottom: 2px solid rgb(154, 240, 128);
+}
+footer h4{
+    margin-top: 5%;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 0%;
+    border-top: 3px solid blueviolet;
+    background-color: white;
+}
+#drop_down_icon{
+    display: none;
+}
+
+@media only screen and (max-width: 600px ){
+    /* 新規登録・ログイン*/
+    .error_list{
+        padding-left: 10%;
+        width: 95%;
+    }
+
+    /* メイン画面 */
+    .header-left{
+        display: none;
+    }
+    .username{
+        width: 100%;
+    }
+    .username p{
+        text-align: center;
+    }
+    .to-use{
+        display: none;
+    }
+
+    /* ドロップダウンメニュー */   
+    #navi{
+        width: 100%;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    #drop_down_icon{
+        text-align: left;
+    }
+    .topost{
+        width: 110px;
+        float: left;
+    }
+    #topost{
+        width: 100%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .logout{
+        width: 100px;
+        float: right;
+    }
+    #logout{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .logout::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    #drop_down_icon{
+        width: 20%;
+        display: block;
+    }
+    .index{
+        margin-top: 20%;
+        text-align: center;
+    }
+    .index h2{
+        margin-bottom: 0;
+        color: white;
+        font-size: larger;
+    }
+    .box{
+        width: 90%;
+    }
+    .post_user_form p{
+        margin-bottom: 0%;
+    }
+    .edit_btn_form::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .edit_btn_form{
+        margin-left: 5%;
+    }
+    .delete_btn_form::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .delete_btn_form{
+        float: right;
+        margin-right: 5%;
+    }
+    .post_at_form p::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .post_at_form{
+        margin-top: 13%;
+    }
+    .post_at_form p{
+        width: 100%;
+        text-align: center;
+    }
+    .tocomment{
+        text-align: center;
+    }
+    
+}
