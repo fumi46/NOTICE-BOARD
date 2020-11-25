@@ -232,7 +232,7 @@ footer p{
     text-align: center;
 }
 
-@media only screen and (max-width: 600px ){
+@media only screen and (max-width: 768px ){
     /* ユーザー登録・ログイン・新規投稿・編集 */
     .error_list{
         padding-left: 10%;
@@ -251,12 +251,18 @@ footer p{
     .loginfail{
         padding-left: 5%;
     }
+    #back-btn{
+        padding-top: 0%;
+    }
     .post_forms{
         width: 90%;
         height: auto;
         margin: 0 auto;
         padding: 0px 30px 20px 20px;
         border: 2px solid blue;
+    }
+    .post_forms p{
+        margin-bottom: 3%;
     }
 
     /* コメント投稿 */

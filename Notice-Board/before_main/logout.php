@@ -22,7 +22,6 @@ if(!$result){
 //ログアウトする
 UserLogic::logout();
 
-
 ?>
 
 <!DOCTYPE html>

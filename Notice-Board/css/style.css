@@ -3,6 +3,7 @@ body{
     background-image: url(../image/afloimagemart_24409020.jpg);
     background-size: cover;
     background-position: center center;
+    height: 100vh;
 }
 #create-time{
     font-size: 5px;
@@ -12,6 +13,9 @@ h1 {
     font-size: 50px;
     font-family: Impact;
     color: aqua;
+}
+h2{
+    margin-bottom: 5%;
 }
 .btn-wrapper{
     margin-top: 6%;
@@ -81,11 +85,21 @@ label{
     box-shadow: none;
 }
 
-@media(max-width: 600px ){
+@media(max-width: 768px ){
     body{
-        background-size:1000px auto;
+        
+        height: 100vh;
+    }
+    h2{
+        margin-bottom: 10%;
+    }
+    .container p{
+        margin-top: 0;
+        margin-bottom: 0;
     }
     .btn-wrapper{
-        width: 100%;
+        margin-top: 16%;
+        width: 87%;
+        
     }
 }

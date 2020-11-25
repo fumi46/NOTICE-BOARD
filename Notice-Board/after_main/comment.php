@@ -84,9 +84,8 @@ $comms = $comm->getByPostId($val);
 <body>
     <h2>コメント投稿</h2>
         <div class="content" id="content">
-        
             <div class="post_user_form">
-            <?php  echo 'No.'.$val ?>
+                <?php  echo 'No.'.$val ?>
                 <p>投稿者 : <?php echo $posted_user ?></p>
             </div>
             <div class="posted">

@@ -1,4 +1,4 @@
-<?php  //投稿削除
+<?php  //投稿削除完了画面
 session_start();  
 
 require_once '../classes/UserLogic.php';

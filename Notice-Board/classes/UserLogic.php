@@ -39,6 +39,7 @@ class UserLogic
             }
         }
 
+
     /**
      * ログイン処理
      * @param string $user,$pass
@@ -69,6 +70,7 @@ class UserLogic
             return $result;
         }
 
+
     /**
      * username カラムからユーザー情報を取得。
      * @param string $user  
@@ -95,6 +97,7 @@ class UserLogic
             }
         }
 
+
     /**
      * ログインチェック
      * @param void
@@ -109,6 +112,7 @@ class UserLogic
             }
             return $result;  
         }
+
 
     /**
      * ログアウト処理 
@@ -168,6 +172,7 @@ class UserLogic
             $dbh = null;                                  //データベース接続終了
         }
 
+
     /**
      * 投稿データの保持（編集画面）
      * @param string $id  
@@ -195,6 +200,7 @@ class UserLogic
             }
         }
     
+
     /**
      * 編集登録
      * @param array $editData 
@@ -227,6 +233,7 @@ class UserLogic
             }
         }
 
+        
     /**
      * 投稿の削除
      * @param string $id
@@ -274,67 +281,70 @@ class UserLogic
                 return $result;                              
         }
 
-        /**
-         * コメントの投稿・取得
-         * @param string $val
-         * @return bool
-         */
-        public static function getByPostId($val)
-        {
-            //SQL実行の流れ = テーブル（レコード）接続 → SQLの準備 → 実行 → 結果
-            
-            $sql = 'SELECT * 
-                    FROM Post 
-                    JOIN Comments 
-                    ON  Post.id = Comments.Post_id 
-                    WHERE Post.id = ?'; 
-            
-            //id 配列を定義。
-            $arr = [];
-            $arr[] = $val;
-            
-            //エラー検証
-            try {  
-                $stmt = connect()->prepare($sql);             //SQLの準備。
-                $stmt->bindValue('?', (int)$val, PDO::PARAM_INT); //値の結合(カラム, 実際の値, データ型)
-                $stmt->execute($arr);                         //SQLの実行。
-                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);  //SQLの結果。
-                return $result;                            
-            }catch(\Exception $e){  
-                return false;
-            }
+
+    /**
+     * コメントの投稿・取得
+     * @param string $val
+     * @return bool
+     */
+    public static function getByPostId($val)
+    {
+        //SQL実行の流れ = テーブル（レコード）接続 → SQLの準備 → 実行 → 結果
+        
+        $sql = 'SELECT * 
+                FROM Post 
+                JOIN Comments 
+                ON  Post.id = Comments.Post_id 
+                WHERE Post.id = ?'; 
+        
+        //id 配列を定義。
+        $arr = [];
+        $arr[] = $val;
+        
+        //エラー検証
+        try {  
+            $stmt = connect()->prepare($sql);             //SQLの準備。
+            $stmt->bindValue('?', (int)$val, PDO::PARAM_INT); //値の結合(カラム, 実際の値, データ型)
+            $stmt->execute($arr);                         //SQLの実行。
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);  //SQLの結果。
+            return $result;                            
+        }catch(\Exception $e){  
+            return false;
         }
+    }
 
-        /**
-         * コメント登録
-         * @param string $commentData
-         * @return bool
-         */
-        public static function createComment($commentData)
-        {
-            $result = false;
 
-            //投稿データ配列を定義。
-            $arr = [];
-            $arr[] = $commentData['Post_id'];
-            $arr[] = $commentData['comment_user'];
-            $arr[] = $commentData['comment'];
+    /**
+     * コメント登録
+     * @param string $commentData
+     * @return bool
+     */
+    public static function createComment($commentData)
+    {
+        $result = false;
 
-            $sql = 'INSERT INTO Comments(Post_id, comment_user, comment)
-                    VALUES(?, ?, ?)';
+        //投稿データ配列を定義。
+        $arr = [];
+        $arr[] = $commentData['Post_id'];
+        $arr[] = $commentData['comment_user'];
+        $arr[] = $commentData['comment'];
+        $sql = 'INSERT INTO Comments(Post_id, comment_user, comment)
+                VALUES(?, ?, ?)';
 
-            $dbh = Connect();          
-            $dbh->beginTransaction();  //トランザクション開始
-            try{
-                $stmt = $dbh->prepare($sql);    //SQLの準備
-                $result = $stmt->execute($arr); //SQLの実行
-                $dbh->commit();                 //トランザクション確定
-                return $result;                 //SQLの結果
-            } catch(PDOException $e){
-                $dbh->rollBack();               //データベースへの変更をロールバック
-                return $result;
-            }
+        $dbh = Connect();          
+        $dbh->beginTransaction();  //トランザクション開始
+
+        try{
+            $stmt = $dbh->prepare($sql);    //SQLの準備
+            $result = $stmt->execute($arr); //SQLの実行
+            $dbh->commit();                 //トランザクション確定
+            return $result;                 //SQLの結果
+        } catch(PDOException $e){
+            $dbh->rollBack();               //データベースへの変更をロールバック
+            return $result;
         }
+    }
+
 
     /**
      * コメントデータの削除

@@ -2,7 +2,7 @@ $(function(){
 
     /* ドロップダウンメニュー */
     /* 初期表示 */
-    if(window.matchMedia('(max-width: 600px)').matches){
+    if(window.matchMedia('(max-width: 576px)').matches){
         $('.drop_hidden').hide();  //スマホ対応
     }else{
         $('.drop_hidden').show();  //PC対応
@@ -19,7 +19,7 @@ $(function(){
 
     /* ウィンドウがリサイズされた時 */
     $(window).resize(function(){
-        if(window.matchMedia('(max-width: 600px)').matches){
+        if(window.matchMedia('(max-width: 576px)').matches){
             $('.drop_hidden').hide();  //スマホ対応
         }else{
             $('.drop_hidden').show();  //PC対応

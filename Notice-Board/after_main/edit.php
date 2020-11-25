@@ -89,13 +89,12 @@ $edit_content = $result['content'];
                         <p>入力文字数: <span id="count">0</span>/300</p>
                         <!-- ボタン -->
                         <a href="./main.php" id="back-btn" name="back" >←戻る</a>
-                        <!--<input type="hidden" name="csrf_token" value="<?php //echo h(setToken()); ?>">--><!--トークン埋め込み-->
                         <input type="submit" id="post-btn"  name="edit_post" value="更新する"></input>
                     </div>
             </form>
         </div>
     </div>
-    <!-- jQueryの読み込み -->
+<!-- jQueryの読み込み -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
 <!-- 自作ファイルの読み込み -->
 <script src="../script.js"></script>

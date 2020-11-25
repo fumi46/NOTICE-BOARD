@@ -122,7 +122,6 @@ if(count($err_mes) === 0){
                     <p>入力文字数: <span id="count">0</span>/300</p>
                     <!-- ボタン -->
                     <a href="./main.php" id="back-btn" name="back" >←戻る</a>
-                    <!--<input type="hidden" name="csrf_token" value="<?php //echo h(setToken()); ?>">--><!--トークン埋め込み-->
                     <input type="submit" id="post-btn"  name="newpost" value="投稿する"></input>
                 </div>
             </form>

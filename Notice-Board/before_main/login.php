@@ -71,8 +71,6 @@ session_destroy();    //セッションを行わない。
                             <?php endif ?>
                     </div>
                         <a href="./index.php" id="back-btn" >←戻る</a>
-
-                        <!--<input type="hidden" name="csrf_token" value="<?php //echo h(setToken()); ?>">--><!--トークン埋め込み-->
                         <input type="submit" id="login-btn"  name="reg" value="ログイン"></input>
                 </div>
             </form>

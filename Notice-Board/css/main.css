@@ -1,8 +1,16 @@
 /* main */
-body{
+body:before{
     background-image: url(../image/Gaz_Brijuni.jpg);
     background-size: cover;
-    background-attachment: fixed;
+    content:"";
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100%;
+    height:100vh;
+    /*background-attachment: fixed;*/
 }
 header{
     position :fixed;
@@ -93,7 +101,7 @@ header{
     color: white;
 }
 .box{
-    width: 50%;
+    width: 55%;
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
@@ -148,7 +156,7 @@ footer h4{
     display: none;
 }
 
-@media only screen and (max-width: 600px ){
+@media only screen and (max-width: 576px ){
     /* 新規登録・ログイン*/
     .error_list{
         padding-left: 10%;
