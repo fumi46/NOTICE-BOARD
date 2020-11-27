@@ -5,6 +5,7 @@ require_once '../classes/UserLogic.php';
 
 if(empty($_SESSION)){
     header('Location: ../before_main/login.php');
+    exit();
 }
 
 //編集データをDBへ保存

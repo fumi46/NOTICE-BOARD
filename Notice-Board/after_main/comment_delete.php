@@ -6,6 +6,7 @@ require_once '../classes/UserLogic.php';
 //セッション外からのアクセス時
 if(empty($_SESSION)){
     header('Location: ../before_main/login.php');
+    exit();
 }
 
 // var_dump($_GET);

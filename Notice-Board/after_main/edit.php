@@ -6,6 +6,7 @@ require_once '../classes/UserLogic.php';
 
 if(empty($_SESSION)){
     header('Location: ../before_main/login.php');
+    exit();
 }
 
 //データ保持

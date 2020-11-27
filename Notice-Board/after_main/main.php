@@ -30,6 +30,7 @@ if(isset($_POST['reg'])){
       if(count($error_message) > 0){
           $_SESSION = $error_message;           //それぞれのエラーメッセージを配列にする。
           header('Location: ../before_main/login.php');
+          exit();
       }
 
       //入力後「ログイン」が押された時の処理
@@ -37,13 +38,15 @@ if(isset($_POST['reg'])){
       
       //ログイン失敗時の処理
       if(!$result){
-          header('Location: ../before_main/login.php');  
+          header('Location: ../before_main/login.php');
+          exit();  
       }
 }
 
 //セッションのチェック
 if(empty($_SESSION)){
   header('Location: ../before_main/login.php');
+  exit();
 }
 
 //新規投稿画面から戻ってきた時

@@ -9,10 +9,11 @@ require_once '../classes/security.php';
 
 if(empty($_SESSION)){
     header('Location: ../before_main/login.php');
+    exit();
 }
 
 // ユーザー名の取得
-$login_name = $_SESSION['login_user']['username'] ;
+$login_name = $_SESSION['login_user']['username'];
 
 //var_dump($_GET);
 //var_dump($_SERVER);
